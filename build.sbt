@@ -1,12 +1,12 @@
-import Dependencies._
+organization := "com.example"
+scalaVersion := "2.12.0"
+version := "0.1.0-SNAPSHOT"
+name := "Hello"
+//serverPort := 8082
 
-// This an example of a simple project definition.
-// It should build on both sbt 0.13.15 and sbt 1.0.0
-lazy val root = (project in file("."))
-  .settings(
-    organization in ThisBuild := "com.example",
-    scalaVersion in ThisBuild := "2.12.2",
-    version      in ThisBuild := "0.1.0-SNAPSHOT",
-    name := "Hello",
-    libraryDependencies += scalaTest % Test
-  )
+// https://mvnrepository.com/artifact/com.typesafe.akka/akka-http
+libraryDependencies += "com.typesafe.akka" %% "akka-http" % "10.1.7"
+
+// https://mvnrepository.com/artifact/com.typesafe.akka/akka-stream
+libraryDependencies += "com.typesafe.akka" %% "akka-stream" % "2.5.21"
+
